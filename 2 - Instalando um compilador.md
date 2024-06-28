@@ -65,34 +65,48 @@ A instalação no Windows é um pouco mais complicada, vamos usar o MinGW.
 - Você pode baixar a versão mais recente do instalador [seguindo esse link direto](https://github.com/msys2/msys2-installer/releases/download/2024-05-07/msys2-x86_64-20240507.exe).
 
 - Siga as instruções do instalador sem alterar nada:
+
 ![Wizard de instalação do MSYS2](images/set-up-compiler/2-installing-mysys2-1.png)
 
 - Ao final, clique em *Finish* (Não desabilite a opção "*Run MSYS2 now*"):
+
 ![Finalizando instalação do MYSYS2](images/set-up-compiler/3-installing-mysys2-2.png)
 
 - Isso abrirá um prompt de comando:
+
 ![Terminal do MYSYS2](images/set-up-compiler/4-mysys2-terminal-1.png)
 
 - Nesse terminal, você instalará o MinGW usando o seguinte comando: `pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain`
 
 - Aceite os pacotes padrão do toolchain pressionando `Enter`:
+
 ![Pacotes padrão do toolchain](images/set-up-compiler/5-mysy2-terminal-2.png)
 
 - Digite `y` quando perguntado se deseja continuar com a instalação, e espere o processo terminar:
+
 ![Continuar com a instalação](images/set-up-compiler/6-mysys2-terminal-3.png)
 
 #### 2.2.2 - Configurando a variável de ambiente
 
 - Abra as configurações do Windows e na barra de pesquisa, digite "ambiente". Clique em "Editar as variáveis de ambiente para sua conta":
+
 ![Pesquisando ambiente nas configurações do Windows](images/set-up-compiler/7-env-1.png)
+
 - Entre as variáveis do usuário, selecione `Path` e depois `Editar`.
 - Na nova janela, clique em `Novo`:
- ![alt text](images/set-up-compiler/8-env-2.png)
+
+![alt text](images/set-up-compiler/8-env-2.png)
+
 - Adicione a pasta de destino do MinGW. Se você não alterou nada durante a instalação, a pasta deve ser `C:\msys64\ucrt64\bin`. Clique em `OK`:
+
 ![alt text](images/set-up-compiler/9-env-3.png)
+
 - Clique em `OK` novamente e feche qualquer terminal que esteja aberto.
+
 ![alt text](images/set-up-compiler/10-env-4.png)
+
 - Em um novo terminal, teste a instalação do MinGW com o comando `g++ --version`:
+
 ![alt text](images/set-up-compiler/11-env-test.png)
 
 #### 2.2.3 - Configurando o vscode para que a biblioteca `bits/stdc++` funcione
@@ -102,11 +116,15 @@ Como iremos usar a biblioteca bits/stdc++ para resolver problemas, pode ser que 
 ![alt text](images/set-up-compiler/12-conf-bits-1.png)
 
 - Pressione `F1` com qualquer janela aberta no vscode e digite `IntelliSense`:
+
 ![alt text](images/set-up-compiler/15-conf-bits-4.png)
+
 - Selecione a opção `Use g++.exe` como apontado na imagem:
+
 ![alt text](images/set-up-compiler/15-conf-bits-5.png)
 
 Agora, o erro deve ter desaparecido, e você pode programar com tranquilidade! :tada::tada::tada:
+
 ![alt text](images/set-up-compiler/16-conf-bits-6.png)
 
 ## 3 - Compilando e executando o código
