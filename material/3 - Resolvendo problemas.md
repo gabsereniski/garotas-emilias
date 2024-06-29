@@ -65,6 +65,10 @@ Imprima uma única linha com um inteiro $X$, o menor comprimento inteiro possív
 
 #### Explicação
 
+Você pode tentar resolver e enviar sua solução ao CodeForces antes de olhar a explicação!
+
+<details><summary><b>Se não conseguir, ou se quiser saber se fizemos a mesma coisa, volte aqui.</b></summary>
+
 Voltando à descrição do problema, podemos retirar alguns dados que podem nos ajudar a chegar na solução:
 
 - "Amy acabou de concluir a última volta, percorrendo um total de $A$ metros";
@@ -76,12 +80,12 @@ Se Amy concluiu a última volta após percorer $A$ metros, e $X$ é o menor comp
 
 Se Blaze está em algum ponto da última volta, quer dizer que após Blaze percorrer $A - B$ metros, ele terá completado o percurso.
 
-Então, o menor valor de uma volta $X$ deve estar entre $A - B$ e $A$ ( $A - B$ ≤ $X$ ≤ $A$ ), e ser um divisor de $A$. Você pode testar os valores dentro de um *loop*. Quando encontrar um divisor de $A$, significa que encontrou a resposta. **Tente codar essa solução e envie no CodeForces!**
+Então, o menor valor de uma volta $X$ deve estar entre $A - B$ e $A$ ( $A - B$ ≤ $X$ ≤ $A$ ), e ser um divisor de $A$. Você pode testar os valores dentro de um *loop*. Quando encontrar um divisor de $A$, significa que encontrou a resposta. **Tente codar essa lógica teste-a no CodeForces!**
 
 Textualmente, pode ser um pouco confuso de entender a lógica, então se encontrar dificuldade, sugiro que desenhe uma circunferência (ou linha) de comprimento $X$, e anote os valores de $A$ e $A - B$, de acordo com os exemplos de entrada e saída.
 
 <details><summary><small>Spoiler</small></summary>
 
-O código que resolve esse problema [está no repositório](/code-examples/solving-problems/ciclismo.cpp), mas sugiro fortemente que você tente resolver por conta própria antes de olhar a solução. Também sugiro que crie uma conta no CodeForces para enviar seu código e ter certeza de que sua solução está correta.
+O código que resolve esse problema [está no repositório](/code-examples/solving-problems/ciclismo.cpp), mas sugiro fortemente que você tente resolver por conta própria antes de olhar a solução.
 
-</details>
+</details></details>
