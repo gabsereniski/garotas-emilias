@@ -17,3 +17,5 @@ Abaixo, você encontra alguns materiais que podem te ajudar a começar a treinar
 [Introdução ao C++](/material/1%20-%20Introdução.md)
 
 [Configurando seu ambiente de desenvolvimento](/material/2%20-%20Configurando%20seu%20ambiente%20de%20desenvolvimento.md)
+
+[Resolvendo problemas](/material/3%20-%20Resolvendo%20problemas.md)
