@@ -46,7 +46,8 @@ A entrada consiste de uma única linha com dois inteiros A e B separados por esp
 
 Imprima uma única linha com um inteiro $X$, o menor comprimento inteiro possível de uma volta.
 
-    Como A e B valem no máximo 10^5, X também deve valer no máximo 10^5 (pela lógica do problema) e pode ser armazenado em uma variável do tipo int
+    Como A e B valem no máximo 10^5, X também deve valer no máximo 10^5 
+    e pode ser armazenado em uma variável do tipo int
 
 #### Exemplos
 
