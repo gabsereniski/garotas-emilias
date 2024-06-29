@@ -76,8 +76,10 @@ Se Amy concluiu a última volta após percorer $A$ metros, e $X$ é o menor comp
 
 Se Blaze está em algum ponto da última volta, quer dizer que após Blaze percorrer $A - B$ metros, ele terá completado o percurso.
 
-Então, o menor valor de uma volta $X$ deve estar entre $A - B$ e $A$, e ser um divisor de $A$. Você pode testar os valores dentro de um *loop*. Quando encontrar um divisor de $A$, significa que encontrou a resposta. **Tente codar essa solução!**
+Então, o menor valor de uma volta $X$ deve estar entre $A - B$ e $A$, e ser um divisor de $A$. Você pode testar os valores dentro de um *loop*. Quando encontrar um divisor de $A$, significa que encontrou a resposta. **Tente codar essa solução e envie no CodeForces!**
 
 Textualmente, pode ser um pouco confuso de entender a lógica, então se encontrar dificuldade, sugiro que desenhe uma circunferência (ou linha) de comprimento $X$, e anote os valores de $A$ e $A - B$, de acordo com os exemplos de entrada e saída.
 
-<sup>O código dessa solução está no repositório, mas sugiro fortemente que você tente resolver por conta própria antes de olhar a solução. Também sugiro que crie uma conta no CodeForces para enviar seu código e ter certeza de que sua solução está correta</sup>
+<details> <summary><small>Spoiler</small></summary>
+O código que resolve esse problema [está no repositório](/code-examples/solving-problems/ciclismo.cpp), mas sugiro fortemente que você tente resolver por conta própria antes de olhar a solução. Também sugiro que crie uma conta no CodeForces para enviar seu código e ter certeza de que sua solução está correta.
+</details>
