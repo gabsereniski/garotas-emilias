@@ -11,6 +11,11 @@ int main()
     
     cout << s << endl;
 
+    string b = "aba";
+    string c = b + 'c' + b;
+
+    cout << c << '\n';
+
     string palavra;
     string frase;
 
@@ -18,9 +23,15 @@ int main()
     cin >> palavra;
     cin.ignore(); // precisamos disso para que o getline
                   // ignore a quebra de linha digitada depois da palavra
-    cout << "digite uma frase: ";
+    cout << "digite uma frase (ou uma palavra mesmo): ";
     getline(cin, frase, '\n');
 
     cout << palavra << endl;
     cout << frase << endl;
+
+    if(palavra == frase) cout << "a palavra e a frase são iguais.\n";
+    else                 cout << "a palavra e a frase são diferentes.\n";
+
+    if(palavra < frase) cout << "a palavra vem antes da frase, lexicamente.\n";
+    if(palavra > frase) cout << "a palavra vem depois da frase, lexicamente.\n";
 }

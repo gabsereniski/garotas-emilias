@@ -470,6 +470,26 @@ cin.ignore(); // precisamos disso para que o getline
 getline(cin, frase, '\n');
 ```
 
+Também é possível concatenar strings à outras strings ou caracteres com o operador `+` e compará-las com o operador `==`, `<` e `>`:
+
+```c++
+string b = "aba";
+string c = b + 'c' + b;
+
+cout << c << '\n';
+// isso imprime:
+// abacaba
+
+string x, y;
+cin >> x >> y;
+
+if(x == y) cout << "x e y são iguais.\n";
+else       cout << "x e y são diferentes.\n";
+
+if(x < y) cout << "a palavra vem antes da frase, lexicamente.\n";
+if(x > y) cout << "a palavra vem depois da frase, lexicamente.\n";
+```
+
 ## 5 - Conclusão
 
 Acho que isso já é uma carga considerável de coisas para absorver de uma vez, principalmente se você for iniciante. Recomendo que abra os códigos disponíveis [aqui](/code-examples/intro/), leia, compile e execute os exemplos, faça alterações e testes, até se sentir confortável.
