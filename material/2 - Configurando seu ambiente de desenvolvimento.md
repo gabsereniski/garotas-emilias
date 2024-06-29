@@ -26,7 +26,7 @@ Pra executar e testar seu código, você vai precisar ter um compilador instalad
 
 ### 2.1 - Linux / macOS
 
-Se você usa Linux, é possível que o compilador gcc/g++ esteja instalado por padrão. Para ter certeza, abra um terminal e digite `g++ --version`. Se o terminal acusar não reconhecer o comando, você precisará instalá-lo. Execute o comando de acordo com sua distribuição
+Se você usa Linux, é possível que o compilador `gcc/g++` esteja instalado por padrão. Para ter certeza, abra um terminal e digite `g++ --version`. Se o terminal acusar não reconhecer o comando, você precisará instalá-lo. Para isso, execute o comando de acordo com sua distribuição:
 
 ```bash
 # debian / ubuntu
@@ -46,7 +46,7 @@ $ sudo zypper install gcc gcc-c++
 $ xcode-select --install
 ```
 
-Então, verifique a instalação com o comando `g++ --version`.
+Então, verifique a instalação com o comando `g++ --version`:
 
 ```bash
 $ g++ --version
@@ -62,23 +62,23 @@ A instalação no Windows é um pouco mais complicada, vamos usar o MinGW.
 
 #### 2.2.1 - Baixando e instalando a toolchain MinGW-w64
 
-- Você pode baixar a versão mais recente do instalador [seguindo esse link direto](https://github.com/msys2/msys2-installer/releases/download/2024-05-07/msys2-x86_64-20240507.exe).
+- Você pode baixar a versão mais recente do instalador seguindo esse [link direto](https://github.com/msys2/msys2-installer/releases/download/2024-05-07/msys2-x86_64-20240507.exe).
 
 - Siga as instruções do instalador sem alterar nada:
 
 ![Wizard de instalação do MSYS2](images/set-up-compiler/2-installing-mysys2-1.png)
 
-- Ao final, clique em *Finish* (Não desabilite a opção "*Run MSYS2 now*"):
+- Ao final, clique em `Finish` (Não desabilite a opção `Run MSYS2 now`):
 
 ![Finalizando instalação do MYSYS2](images/set-up-compiler/3-installing-mysys2-2.png)
 
-- Isso abrirá um prompt de comando:
+- Isso abrirá um *prompt* de comando:
 
 ![Terminal do MYSYS2](images/set-up-compiler/4-mysys2-terminal-1.png)
 
 - Nesse terminal, você instalará o MinGW usando o seguinte comando: `pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain`
 
-- Aceite os pacotes padrão do toolchain pressionando `Enter`:
+- Aceite os pacotes padrão do *toolchain* pressionando `Enter`:
 
 ![Pacotes padrão do toolchain](images/set-up-compiler/5-mysy2-terminal-2.png)
 
@@ -88,7 +88,7 @@ A instalação no Windows é um pouco mais complicada, vamos usar o MinGW.
 
 #### 2.2.2 - Configurando a variável de ambiente
 
-- Abra as configurações do Windows e na barra de pesquisa, digite "ambiente". Clique em "Editar as variáveis de ambiente para sua conta":
+- Abra as configurações do Windows e na barra de pesquisa, digite `ambiente`. Clique em `Editar as variáveis de ambiente para sua conta`:
 
 ![Pesquisando ambiente nas configurações do Windows](images/set-up-compiler/7-env-1.png)
 
@@ -111,15 +111,15 @@ A instalação no Windows é um pouco mais complicada, vamos usar o MinGW.
 
 #### 2.2.3 - Configurando o vscode para que a biblioteca `bits/stdc++` funcione
 
-Como iremos usar a biblioteca bits/stdc++ para resolver problemas, pode ser que o vscode não reconheça ela de primeira. Isso gerará um erro no vscode, mas se não houverem outros erros no seu código, ele deve compilar. Entretanto, ter o *squiggly error* gritando pra você sempre que decidir programar pode ser bastante irritante, então vamos tentar resolver isso.
+Como iremos usar a biblioteca `bits/stdc++` para resolver problemas, pode ser que o vscode não reconheça ela de primeira. Isso gerará um erro no vscode, mas se não houverem outros erros no seu código, ele deve compilar. Entretanto, ter o *squiggly error* gritando pra você sempre que decidir programar pode ser bastante irritante, então vamos tentar resolver isso.
 
 ![alt text](images/set-up-compiler/12-conf-bits-1.png)
 
-- Pressione `F1` com qualquer janela aberta no vscode e digite `IntelliSense`:
+- Pressione `F1` com qualquer janela aberta no vscode e digite `IntelliSense`. Selecione a opção `C/C++: Select IntelliSense Configuration...`:
 
 ![alt text](images/set-up-compiler/15-conf-bits-4.png)
 
-- Selecione a opção `Use g++.exe` como apontado na imagem:
+- Selecione a opção `Use g++.exe`, como apontado na imagem:
 
 ![alt text](images/set-up-compiler/15-conf-bits-5.png)
 
@@ -129,7 +129,7 @@ Agora, o erro deve ter desaparecido, e você pode programar com tranquilidade! :
 
 ## 3 - Compilando e executando o código
 
-Crie um arquivo `1001.cpp` e escreva seu primeiro programa
+Crie um arquivo `1001.cpp` e escreva seu primeiro programa:
 
 ```c++
 #include <bits/stdc++.h>

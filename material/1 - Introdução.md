@@ -1,6 +1,6 @@
 # Primeiros Passos
 
-Pra resolver problemas de programação competitiva, vamos usar C++. Os compiladores de C++ geram programas super rápidos, e a linguagem tem uma biblioteca padrão que pode facilitar muito nossa vida. Você pode ver como configurar sua máquina para usar o compilador [aqui](/2%20-%20Instalando%20um%20compilador.md).
+Pra resolver problemas de programação competitiva, vamos usar C++. Os compiladores de C++ geram programas super rápidos, e a linguagem tem uma biblioteca padrão que pode facilitar muito nossa vida. Você pode ver como configurar sua máquina para programar em C++ [aqui](/material/2%20-%20Configurando%20seu%20ambiente%20de%20desenvolvimento.md).
 
 ## Sumário
 
@@ -13,6 +13,7 @@ Pra resolver problemas de programação competitiva, vamos usar C++. Os compilad
     - [3 - Controle de fluxo](#3---controle-de-fluxo)
       - [3.1 - `if/else`](#31---ifelse)
       - [3.2 - Laços de repetição](#32---laços-de-repetição)
+      - [3.3 - Escopo](#33---escopo)
   - [4 - Strings](#4---strings)
   - [5 - Conclusão](#5---conclusão)
     - [5.1 - Exercícios recomendados](#51---exercícios-recomendados)
@@ -327,6 +328,78 @@ cout << "\n";
 // 0 2 4 6 8
 ```
 
+#### 3.3 - Escopo
+
+Assim como uma variável declarada dentro de uma função não é acessível para outra, variáveis declaradas dentro de um bloco condicional ou *loop* não são acessíveis fora dele:
+
+```c++
+int x;
+cin >> x;
+
+if(x < 10)
+{
+    int a, b;               // a e b são apenas acessíveis dentro do if
+    cin >> a >> b;
+    cout << a + b << '\n';
+}
+
+else
+{
+    int c;                  // c é apenas acessível dentro do else
+    cin >> c;
+    cout << x / c << '\n';  // x, por ter sido declarada fora do bloco, pode ser usado aqui
+}
+// tentar usar a, b ou c fora desses blocos, causará erros de compilação
+// dizendo que as variáveis não foram declaradas
+
+for(int i = 0; i < x; i++)
+{
+    // o i só é reconhecido dentro do loop
+}
+
+int i;
+for(i = 0; i < x; i++)
+{
+    // se declarar ele antes, pode usar ele tanto aqui
+}
+// quanto aqui
+```
+
+Pense no escopo como um conjunto de pilhas: sua base é o escopo global para todas elas. Quando criamos uma função, colocamos ela na pilha, assim como quando declaramos blocos de controle de fluxo. Ao fim dos blocos, tiramos ele da pilha. Se temos um bloco e depois outro, podemos visualizar isso como uma pilha ao lado da outra. Tudo o que está no escopo atual e abaixo dele é acessível, mas não o que está ao seu lado:
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+int x, y;
+
+int fun(int a, int b)
+{
+    if(a > b)
+    {
+        int c = a - b;
+        return c;
+    }
+    else
+    {
+        int c = 0;
+        for(int i = a; i <= c; i++)
+            c += i;
+        return c;
+    }
+}
+
+int main()
+{
+    cin >> x >> y;
+    int z = soma(x, y);
+    cout << z << '\n';
+}
+```
+
+![alt text](images/intro/scope-stack-dark.png#gh-dark-mode-only)
+![alt text](images/intro/scope-stack-light.png#gh-light-mode-only)
+
 ## 4 - Strings
 
 Uma *string* nada mais é do que uma *array* do tipo `char`. é comum que você veja códigos com *strings* declaradas assim:
@@ -399,7 +472,7 @@ getline(cin, frase, '\n');
 
 ## 5 - Conclusão
 
-Acho que isso já é uma carga considerável de coisas para absorver de uma vez, principalmente se você for iniciante. Recomendo que abra os códigos disponíveis [aqui](/code-examples/intro), leia, compile e execute os exemplos, faça alterações e testes, até se sentir confortável.
+Acho que isso já é uma carga considerável de coisas para absorver de uma vez, principalmente se você for iniciante. Recomendo que abra os códigos disponíveis [aqui](/code-examples/intro/), leia, compile e execute os exemplos, faça alterações e testes, até se sentir confortável.
 
 ### 5.1 - Exercícios recomendados
 
