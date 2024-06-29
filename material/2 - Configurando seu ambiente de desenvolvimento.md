@@ -157,7 +157,7 @@ Você verá que um arquivo chamado `1001.out` foi gerado. Agora, para executá-l
 # linux / macOS
 ./1001.out
 
-# Windodws
+# Windows CMD
 1001.out
 ```
 
