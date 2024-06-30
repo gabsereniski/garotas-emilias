@@ -13,8 +13,8 @@ Pra resolver problemas de programação competitiva, vamos usar C++. Os compilad
     - [3 - Controle de fluxo](#3---controle-de-fluxo)
       - [3.1 - `if/else`](#31---ifelse)
       - [3.2 - Laços de repetição](#32---laços-de-repetição)
-      - [3.3 - Escopo](#33---escopo)
-  - [4 - Strings](#4---strings)
+  - [4 - Escopo](#4---escopo)
+  - [5 - Strings](#5---strings)
   - [5 - Conclusão](#5---conclusão)
     - [5.1 - Exercícios recomendados](#51---exercícios-recomendados)
 
@@ -328,7 +328,7 @@ cout << "\n";
 // 0 2 4 6 8
 ```
 
-#### 3.3 - Escopo
+## 4 - Escopo
 
 Assim como uma variável declarada dentro de uma função não é acessível para outra, variáveis declaradas dentro de um bloco condicional ou *loop* não são acessíveis fora dele:
 
@@ -400,7 +400,7 @@ int main()
 ![alt text](images/intro/scope-stack-dark.png#gh-dark-mode-only)
 ![alt text](images/intro/scope-stack-light.png#gh-light-mode-only)
 
-## 4 - Strings
+## 5 - Strings
 
 Uma *string* nada mais é do que uma *array* do tipo `char`. é comum que você veja códigos com *strings* declaradas assim:
 
@@ -447,6 +447,7 @@ int main()
     string s(10, 'a');
     cout << s << endl;
 
+    // você pode saber o tamanho de uma string com o .size()
     for(int i = 0; i < s.size(); i++)
         if(i % 2) s[i] = 'b';
     
@@ -496,7 +497,7 @@ Acho que isso já é uma carga considerável de coisas para absorver de uma vez,
 
 ### 5.1 - Exercícios recomendados
 
-Lembre-se, a melhor forma de aprender a programar é programando, então deixo aqui uma lista de exercícios recomendados para que você treine a sintaxe básica da linguagem:
+Lembre-se, a melhor forma de aprender a programar é programando, então deixo aqui uma lista de exercícios recomendados para que você treine a sintaxe básica da linguagem e um pouquinho de lógica de programação:
 
 - [1001 - Extremamente Básico](https://judge.beecrowd.com/pt/problems/view/1001)
 - [1002 - Área do Círculo](https://judge.beecrowd.com/pt/problems/view/1002)
@@ -506,5 +507,9 @@ Lembre-se, a melhor forma de aprender a programar é programando, então deixo a
 - [1052 - Mês](https://judge.beecrowd.com/pt/problems/view/1052)
 - [1059 - Números pares](https://judge.beecrowd.com/pt/problems/view/1059)
 - [1060 - Números positivos](https://judge.beecrowd.com/pt/problems/view/1060)
+- [1188 - Área Inferior](https://judge.beecrowd.com/pt/problems/view/1188)
 - [1435 - Matriz Quadrada I](https://judge.beecrowd.com/pt/problems/view/1435)
 - [1914 - De quem é a vez](https://judge.beecrowd.com/pt/problems/view/1914)
+- [2163 - O despertar da força](https://judge.beecrowd.com/pt/problems/view/2163)
+- [2165 - Tweet](https://judge.beecrowd.com/pt/problems/view/2165)
+- [2189 - Quermesse](https://judge.beecrowd.com/pt/problems/view/2189)
