@@ -14,10 +14,10 @@ Essa explicação toda pode parecer muito vaga, então, nada melhor do que anali
 
 Os primeiros dados apresentados são quanto aos limites de tempo de execução, limite de memória, e onde deve ser feita a entrada e a saída:
 
-    tempo limite: 1 segundo
-    limite de memória: 256 MB
-    entrada: entrada padrão
-    saída: saída padrão
+> tempo limite: 1 segundo
+> limite de memória: 256 MB
+> entrada: entrada padrão
+> saída: saída padrão
 
 - **Limite de tempo:** sua solução deve terminar de executar em no máximo 1 segundo.
 - **Limite de memória:** você pode alocar variáveis e estruturas que ocupem no máximo 256 MB
@@ -33,21 +33,16 @@ Porém, você percebeu que, como não sabe o número total de voltas, existem v�
 
 A entrada consiste de uma única linha com dois inteiros A e B separados por espaço ( $0 ≤ B < A ≤ 10^5$ ), o comprimento que Amy e Blaze percorreram até o momento, respectivamente.
 
-    Atente-se ao intervalo dado:
-        0 <= B <= 10^5
-        B < A <= 10^5
-    B pode ter valores de 0 a 10^5, inclusive
-    A é estritamente maior que B (então A != B), e pode chegar até 10^5
-
-    Como A e B são inteiros positivos que valerão no máximo 10^5, você pode armazenar
-    seus valores em uma variável do tipo int
+>Atente-se ao intervalo dado:
+    >$0 ≤ B < 10^5$
+    >$B < A \le 10^5$
+>$B$ pode ter valores de $0$ a $A$, e $A$ pode chegar a valer $10^5$. Como esses são valores inteiros, você pode armazená-los em uma variável do tipo `int`
 
 #### Saída
 
 Imprima uma única linha com um inteiro $X$, o menor comprimento inteiro possível de uma volta.
 
-    Como A e B valem no máximo 10^5, X também deve valer no máximo 10^5 
-    e pode ser armazenado em uma variável do tipo int
+>Como $A$ e $B$ valem no máximo $10^5$, $X$ também deve valer no máximo $10^5$ e pode ser armazenado em uma variável do tipo `int`
 
 #### Exemplos
 
