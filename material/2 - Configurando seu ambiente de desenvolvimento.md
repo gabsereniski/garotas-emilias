@@ -148,17 +148,24 @@ int main()
 Na pasta em que criou o programa, abra um terminal. No terminal, digite:
 
 ```bash
+# linux / macOS
 g++ 1001.cpp -o 1001.out 
+
+# Windows
+g++ 1001.cpp -o 1001
 ```
 
-Você verá que um arquivo chamado `1001.out` foi gerado. Agora, para executá-lo, digite (conforme o sistema operacional):
+Você verá que um arquivo chamado `1001.out/1001.exe` foi gerado. Agora, para executá-lo, digite (conforme o sistema operacional):
 
 ```bash
 # linux / macOS
 ./1001.out
 
 # Windows CMD
-1001.out
+1001.exe
+
+# Windows PowerShell
+./1001.exe
 ```
 
 Digite dois números e veja a resposta!
