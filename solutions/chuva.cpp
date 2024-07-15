@@ -6,49 +6,43 @@ int main()
     int n, m;
     cin >> n >> m;
 
-    char tab[n][m];
+    char c[n+2][m+2];
 
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < m; j++)
-            cin >> tab[i][j];
+    memset(c, '@', sizeof(c));
 
-    for (int i = 0; i < n; i++)
+    for(int i = 1; i <= n; i++)
+        for(int j = 1; j <= m; j++)
+            cin >> c[i][j];
+    
+    for(int i = 1; i <= n; i++)
     {
-        for (int j = 0; j < m; j++)
+        for(int j = 1; j <= m; j++)
         {
-            if (tab[i][j] == '.')
+            if(c[i][j] == '.')
             {
-                if (i - 1 >= 0 && tab[i - 1][j] == 'o')
-                    tab[i][j] = 'o';
-                if (j - 1 >= 0 && i + 1 < n &&
-                    tab[i][j - 1] == 'o' && tab[i + 1][j - 1] == '#')
-                    tab[i][j] = 'o';
-                if (j + 1 < m && i + 1 < n &&
-                    tab[i][j + 1] == 'o' && tab[i + 1][j + 1] == '#')
-                    tab[i][j] = 'o';
+                if((c[i-1][j] == 'o')
+                || (c[i][j-1] == 'o' && c[i+1][j-1] == '#')
+                || (c[i][j+1] == 'o' && c[i+1][j+1] == '#'))
+                    c[i][j] = 'o';
             }
         }
 
-        for (int j = m - 1; j >= 0; j--)
+        for(int j = m-1; j >= 0; j--)
         {
-            if (tab[i][j] == '.')
+            if(c[i][j] == '.')
             {
-                if (i - 1 >= 0 && tab[i - 1][j] == 'o')
-                    tab[i][j] = 'o';
-                if (j - 1 >= 0 && i + 1 < n &&
-                    tab[i][j - 1] == 'o' && tab[i + 1][j - 1] == '#')
-                    tab[i][j] = 'o';
-                if (j + 1 < m && i + 1 < n &&
-                    tab[i][j + 1] == 'o' && tab[i + 1][j + 1] == '#')
-                    tab[i][j] = 'o';
+                if((c[i-1][j] == 'o')
+                || (c[i][j-1] == 'o' && c[i+1][j-1] == '#')
+                || (c[i][j+1] == 'o' && c[i+1][j+1] == '#'))
+                    c[i][j] = 'o';
             }
         }
     }
 
-    for (int i = 0; i < n; i++)
+    for(int i = 1; i <= n; i++)
     {
-        for (int j = 0; j < m; j++)
-            cout << tab[i][j];
+        for(int j = 1; j <= m; j++)
+            cout << c[i][j];
         cout << endl;
     }
 }
