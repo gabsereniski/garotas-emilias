@@ -35,6 +35,5 @@
 *.txt
 .*/
 
-2nd-contest/
 create-cpp.sh
 template.cpp
